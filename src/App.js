@@ -106,7 +106,7 @@ function App() {
       newOutput.push('-a---           1/15/2026  4:12 PM             256 skills.json');
       newOutput.push('-a---           1/14/2026  11:20 PM            129 .secret.py');
       newOutput.push('');
-    } else if (trimmed === 'python secret.py' || trimmed === 'secret.py') {
+    } else if (trimmed === 'python secret.py') {
       newOutput.push('');
       const catArt = [
         '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀',
