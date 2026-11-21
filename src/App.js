@@ -9,84 +9,56 @@ function App() {
       case 'home':
         return (
           <div className="section">
-            <pre className="ascii-art">
-{`  _____ _____             __  __              _    _
- / ____|  __ \\           |  \\/  |            | |  | |
-| |  __| |  | |_ __ __ _| |\\/| | __ _ _ __ | |__| | ___
-| | |_ | |  | | '__/ _\` | |  | |/ _\` | '_ \\|  __  |/ _ \\
-| |__| | |__| | | | (_| | |  | | (_| | | | | |  | | (_) |
- \\_____|_____/|_|  \\__,_|_|  |_|\\__,_|_| |_|_|  |_|\\___/`}
-            </pre>
-            <div className="command">whoami</div>
+            <div className="name-header">Grace McPadden</div>
             <div className="output">
-              <strong>Grace McPadden</strong> - Full Stack Developer & Tech Enthusiast
+              <div className="email">Grace.Mcpadden@UConn.edu | linkedin.com/in/grace-mcpadden | github.com/GraceMcPadden2</div>
             </div>
-            <div className="command">echo $BIO</div>
+            <div className="output" style={{ marginTop: '16px' }}>
+              <span className="label">status:</span> <span className="value">Associate Software Engineer @ The Hartford</span>
+            </div>
             <div className="output">
-              Passionate about building beautiful, functional web applications with modern technologies.
-              Experienced in React, Node.js, and cloud technologies. Always learning and exploring new tech.
+              <span className="label">education:</span> <span className="value">B.S. Computer Science & B.S. Mathematics, University of Connecticut (Expected May 2026)</span>
             </div>
-            <div style={{ marginTop: '20px' }}>
-              <span className="cursor"></span>
+            <div className="output">
+              <span className="label">gpa:</span> <span className="value">3.7/4.0</span>
             </div>
           </div>
         );
 
-      case 'about':
+      case 'experience':
         return (
           <div className="section">
-            <div className="command">cat about.txt</div>
-            <div className="output">
+            <div className="section-title">Professional Experience</div>
+
+            <div className="experience-item">
               <div>
-                <strong>Background</strong>
-                <br />
-                I'm a developer with a passion for creating clean, intuitive user experiences and scalable backend systems.
-                With experience across the full stack, I enjoy solving complex problems and collaborating with teams.
+                <span className="job-title">Associate Software Engineer</span> • <span className="company">The Hartford</span>
               </div>
-              <div style={{ marginTop: '15px' }}>
-                <strong>Education</strong>
-                <br />
-                [Add your education details here]
-              </div>
-              <div style={{ marginTop: '15px' }}>
-                <strong>When I'm not coding...</strong>
-                <br />
-                [Add your interests/hobbies here]
-              </div>
+              <div className="date">June 2026 – Present | Hartford, CT</div>
+              <ul className="bullet-list">
+                <li>Working on Agentic AI solutions for Reliability Engineering</li>
+              </ul>
             </div>
-          </div>
-        );
 
-      case 'skills':
-        return (
-          <div className="section">
-            <div className="command">ls -la ~/skills</div>
-            <div className="output">
-              <div><strong>Frontend:</strong></div>
-              <div style={{ marginLeft: '20px', marginTop: '10px', marginBottom: '15px' }}>
-                <span className="skill-tag">React</span>
-                <span className="skill-tag">JavaScript</span>
-                <span className="skill-tag">CSS</span>
-                <span className="skill-tag">HTML</span>
-                <span className="skill-tag">TypeScript</span>
+            <div className="experience-item">
+              <div>
+                <span className="job-title">Software Engineer Intern</span> • <span className="company">The Hartford</span>
               </div>
+              <div className="date">May 2025 – August 2025 | Hartford, CT</div>
+              <ul className="bullet-list">
+                <li>Built a Retrieval-Augmented Generation (RAG) chatbot using AWS OpenSearch and vector embeddings to enable semantic search across internal documentation</li>
+                <li>Developed a multimodal document classification system combining text embeddings with a ResNet vision model, achieving 82% accuracy on a 10K+ document dataset</li>
+              </ul>
+            </div>
 
-              <div><strong>Backend:</strong></div>
-              <div style={{ marginLeft: '20px', marginTop: '10px', marginBottom: '15px' }}>
-                <span className="skill-tag">Node.js</span>
-                <span className="skill-tag">Express</span>
-                <span className="skill-tag">Python</span>
-                <span className="skill-tag">SQL</span>
-                <span className="skill-tag">MongoDB</span>
+            <div className="experience-item">
+              <div>
+                <span className="job-title">Teaching Assistant</span> • <span className="company">University of Connecticut</span>
               </div>
-
-              <div><strong>Tools & Other:</strong></div>
-              <div style={{ marginLeft: '20px', marginTop: '10px' }}>
-                <span className="skill-tag">Git</span>
-                <span className="skill-tag">Docker</span>
-                <span className="skill-tag">AWS</span>
-                <span className="skill-tag">VS Code</span>
-              </div>
+              <div className="date">August 2024 – Present | Storrs, CT</div>
+              <ul className="bullet-list">
+                <li>Led weekly programming labs for 150+ students in CSE3140 and CSE1010, teaching debugging, algorithms, and Python programming fundamentals</li>
+              </ul>
             </div>
           </div>
         );
@@ -94,51 +66,83 @@ function App() {
       case 'projects':
         return (
           <div className="section">
-            <div className="command">ls ~/projects</div>
+            <div className="section-title">Projects & Activities</div>
+
+            <div className="experience-item">
+              <div>
+                <span className="job-title">Senior Design Project: Embodied AI Agent on Unitree Go2 Robot</span>
+              </div>
+              <ul className="bullet-list">
+                <li>Developed AI agent for a Unitree Go2 robot for autonomous navigation and task execution</li>
+              </ul>
+            </div>
+
+            <div className="experience-item">
+              <div>
+                <span className="job-title">Segmentation of Weapons from CCTV Footage with Computer Vision</span>
+              </div>
+              <ul className="bullet-list">
+                <li>Developed a real-time weapon detection system using YOLOv5 trained on 5,000+ annotated CCTV images</li>
+                <li>Improved detection accuracy through hyperparameter tuning</li>
+              </ul>
+            </div>
+
+            <div className="experience-item">
+              <div>
+                <span className="job-title">Husky Quantitative Group</span>
+              </div>
+              <div className="date">August 2025 – May 2026 | University of Connecticut</div>
+              <ul className="bullet-list">
+                <li>Trained a reinforcement learning based portfolio optimization model using PPO to optimize Sharpe ratio across SPY, GLD, BTC, and IEF</li>
+                <li>Used credit card data from partnership with CarbonArc to predict earnings per share with a 95% confidence interval</li>
+              </ul>
+            </div>
+          </div>
+        );
+
+      case 'skills':
+        return (
+          <div className="section">
+            <div className="section-title">Skills</div>
+
             <div className="output">
-              <div className="project-box">
-                <div className="project-title">> Project 1: [Project Name]</div>
-                <div className="project-description">
-                  Description of your first project. What problem did it solve? What technologies did you use?
-                </div>
-                <div>
-                  <span className="skill-tag">React</span>
-                  <span className="skill-tag">Node.js</span>
-                </div>
-                <div style={{ marginTop: '10px' }}>
-                  <span className="project-link">» GitHub Repo</span> |
-                  <span className="project-link" style={{ marginLeft: '10px' }}>» Live Demo</span>
-                </div>
+              <div className="label">Languages:</div>
+              <div>
+                <span className="skill-tag">Python</span>
+                <span className="skill-tag">C++</span>
+                <span className="skill-tag">C</span>
+                <span className="skill-tag">SQL</span>
               </div>
+            </div>
 
-              <div className="project-box">
-                <div className="project-title">> Project 2: [Project Name]</div>
-                <div className="project-description">
-                  Description of your second project. What technologies were involved?
-                </div>
-                <div>
-                  <span className="skill-tag">React</span>
-                  <span className="skill-tag">Firebase</span>
-                </div>
-                <div style={{ marginTop: '10px' }}>
-                  <span className="project-link">» GitHub Repo</span> |
-                  <span className="project-link" style={{ marginLeft: '10px' }}>» Live Demo</span>
-                </div>
+            <div className="output">
+              <div className="label">Machine Learning:</div>
+              <div>
+                <span className="skill-tag">PyTorch</span>
+                <span className="skill-tag">TensorFlow</span>
+                <span className="skill-tag">Computer Vision</span>
+                <span className="skill-tag">Reinforcement Learning</span>
               </div>
+            </div>
 
-              <div className="project-box">
-                <div className="project-title">> Project 3: [Project Name]</div>
-                <div className="project-description">
-                  Description of your third project and what you learned from it.
-                </div>
-                <div>
-                  <span className="skill-tag">Full Stack</span>
-                  <span className="skill-tag">AWS</span>
-                </div>
-                <div style={{ marginTop: '10px' }}>
-                  <span className="project-link">» GitHub Repo</span> |
-                  <span className="project-link" style={{ marginLeft: '10px' }}>» Live Demo</span>
-                </div>
+            <div className="output">
+              <div className="label">Data:</div>
+              <div>
+                <span className="skill-tag">Pandas</span>
+                <span className="skill-tag">NumPy</span>
+              </div>
+            </div>
+
+            <div className="output" style={{ marginTop: '12px' }}>
+              <div className="label">Coursework:</div>
+              <div>
+                <span className="skill-tag">Machine Learning</span>
+                <span className="skill-tag">Computer Vision</span>
+                <span className="skill-tag">Algorithms & Complexity</span>
+                <span className="skill-tag">Real Analysis</span>
+                <span className="skill-tag">Numerical Analysis</span>
+                <span className="skill-tag">Linear Algebra</span>
+                <span className="skill-tag">Databases</span>
               </div>
             </div>
           </div>
@@ -147,27 +151,11 @@ function App() {
       case 'contact':
         return (
           <div className="section">
-            <div className="command">cat contact.txt</div>
-            <div className="output">
-              <div><strong>Let's connect! You can reach me at:</strong></div>
-              <div className="contact-links">
-                <span className="contact-link">» Gmail: gracemcpadden9@gmail.com</span>
-              </div>
-              <div className="contact-links">
-                <span className="contact-link">» LinkedIn: [Your LinkedIn]</span>
-              </div>
-              <div className="contact-links">
-                <span className="contact-link">» GitHub: [Your GitHub]</span>
-              </div>
-              <div className="contact-links">
-                <span className="contact-link">» Twitter/X: [Your Twitter]</span>
-              </div>
-              <div style={{ marginTop: '20px' }}>
-                <strong>Message:</strong>
-                <div style={{ marginTop: '10px', fontSize: '14px' }}>
-                  Feel free to reach out for collaborations, opportunities, or just to chat about tech!
-                </div>
-              </div>
+            <div className="section-title">Contact</div>
+            <div className="contact-links">
+              <span className="contact-link">📧 Grace.Mcpadden@UConn.edu</span>
+              <span className="contact-link">🔗 linkedin.com/in/grace-mcpadden</span>
+              <span className="contact-link">💻 github.com/GraceMcPadden2</span>
             </div>
           </div>
         );
@@ -181,12 +169,7 @@ function App() {
     <div className="App">
       <div className="terminal-window">
         <div className="terminal-header">
-          <span className="terminal-title">grace-terminal-portfolio ~</span>
-          <div className="terminal-buttons">
-            <div className="terminal-btn minimize"></div>
-            <div className="terminal-btn maximize"></div>
-            <div className="terminal-btn close"></div>
-          </div>
+          <span className="terminal-title">grace-mcpadden [portfolio] – /home</span>
         </div>
 
         <div className="terminal-content">
@@ -195,31 +178,31 @@ function App() {
               className={`nav-item ${activeSection === 'home' ? 'active' : ''}`}
               onClick={() => setActiveSection('home')}
             >
-              [home]
+              home
             </span>
             <span
-              className={`nav-item ${activeSection === 'about' ? 'active' : ''}`}
-              onClick={() => setActiveSection('about')}
+              className={`nav-item ${activeSection === 'experience' ? 'active' : ''}`}
+              onClick={() => setActiveSection('experience')}
             >
-              [about]
-            </span>
-            <span
-              className={`nav-item ${activeSection === 'skills' ? 'active' : ''}`}
-              onClick={() => setActiveSection('skills')}
-            >
-              [skills]
+              experience
             </span>
             <span
               className={`nav-item ${activeSection === 'projects' ? 'active' : ''}`}
               onClick={() => setActiveSection('projects')}
             >
-              [projects]
+              projects
+            </span>
+            <span
+              className={`nav-item ${activeSection === 'skills' ? 'active' : ''}`}
+              onClick={() => setActiveSection('skills')}
+            >
+              skills
             </span>
             <span
               className={`nav-item ${activeSection === 'contact' ? 'active' : ''}`}
               onClick={() => setActiveSection('contact')}
             >
-              [contact]
+              contact
             </span>
           </div>
 
