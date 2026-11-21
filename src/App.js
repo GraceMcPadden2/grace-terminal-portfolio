@@ -30,12 +30,21 @@ function App() {
 
     if (trimmed === '/home' || trimmed === 'home') {
       newOutput.push('');
-      newOutput.push('Grace McPadden');
-      newOutput.push('Grace.Mcpadden@UConn.edu | linkedin.com/in/grace-mcpadden | github.com/GraceMcPadden2');
+      newOutput.push('Hi, I\'m Grace McPadden.');
+      newOutput.push('Software Engineer, UConn Grad, Data and AI Enthusiast.');
       newOutput.push('');
-      newOutput.push('status:    Associate Software Engineer @ The Hartford');
-      newOutput.push('education: B.S. Computer Science & B.S. Mathematics, UConn (May 2026)');
-      newOutput.push('gpa:       3.7/4.0');
+      newOutput.push('The following commands are available. If you would like to learn more:');
+      newOutput.push('');
+      newOutput.push('  /experience  - View my professional experience at The Hartford');
+      newOutput.push('  /projects    - See my AI and ML projects');
+      newOutput.push('  /skills      - Check out my technical skills');
+      newOutput.push('  /contact     - Get my contact information');
+      newOutput.push('  ls           - List files in the directory');
+      newOutput.push('  vim <file>   - View file contents (resume.pdf, projects.txt, skills.json, secret.py)');
+      newOutput.push('  python secret.py - Run a hidden easter egg 🐱');
+      newOutput.push('  /help        - Show all available commands');
+      newOutput.push('');
+      newOutput.push('Grace.Mcpadden@UConn.edu | linkedin.com/in/grace-mcpadden | github.com/GraceMcPadden2');
       newOutput.push('');
     } else if (trimmed === '/experience' || trimmed === 'experience') {
       newOutput.push('');
@@ -249,6 +258,16 @@ function App() {
   return (
     <div className="App">
       <div className="terminal">
+        <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '8px', borderBottom: '1px solid #3e3e42', backgroundColor: '#1e1e1e' }}>
+          <button className="help-button">
+            ?
+            <div className="help-tooltip">
+              You can interact with this page just like a terminal! Type commands to explore different sections.
+              <br /><br />
+              For an easier view, check out my <span className="help-link" onClick={() => window.open('https://linkedin.com/in/grace-mcpadden', '_blank')}>LinkedIn</span> or <span className="help-link" onClick={() => alert('Resume link: Check /contact for email')}>Resume</span>
+            </div>
+          </button>
+        </div>
         <div className="terminal-output" ref={outputRef}>
           {output.map((line, idx) => (
             <div key={idx} className="output-line">

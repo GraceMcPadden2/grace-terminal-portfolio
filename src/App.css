@@ -185,3 +185,58 @@ body {
   margin-left: 20px;
   margin-top: 2px;
 }
+
+.help-button {
+  background: none;
+  border: 1px solid #0078d4;
+  color: #0078d4;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.help-button:hover {
+  background-color: #0078d4;
+  color: #0c0c0c;
+}
+
+.help-tooltip {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background-color: #252526;
+  border: 1px solid #0078d4;
+  color: #d4d4d4;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.6;
+  width: 280px;
+  margin-bottom: 8px;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  white-space: normal;
+}
+
+.help-button:hover .help-tooltip {
+  display: block;
+}
+
+.help-link {
+  color: #569cd6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.help-link:hover {
+  color: #9cdcfe;
+  text-decoration: underline;
+}
