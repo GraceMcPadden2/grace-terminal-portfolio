@@ -1,15 +1,12 @@
-First time making a project with claude code.
+first time making a project with claude code
 
-It took literally 10 minutes to make and deploy this app... without touching one line of code.
+it took literally 10 minutes to make and deploy this app, without touching one line of code
 
-This was both exciting and terrifying.
+both exciting and terrifying
 
-More to come...
 
 
 Check it out here https://grace-terminal-portfolio.gracemcpadden9.workers.dev/
-
-
 
 
 # Grace McPadden - Terminal Portfolio 🖥️
