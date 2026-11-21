@@ -104,7 +104,76 @@ function App() {
       newOutput.push('-a---           1/15/2026  2:30 PM            1024 resume.pdf');
       newOutput.push('-a---           1/15/2026  3:45 PM             512 projects.txt');
       newOutput.push('-a---           1/15/2026  4:12 PM             256 skills.json');
-      newOutput.push('-a---           1/14/2026  11:20 PM            129 .secret.py');
+      newOutput.push('-a---           1/14/2026  11:20 PM            129 secret.py');
+      newOutput.push('');
+    } else if (trimmed.startsWith('vim ')) {
+      const filename = trimmed.replace('vim ', '').trim();
+      newOutput.push('');
+
+      if (filename === 'resume.pdf') {
+        newOutput.push('~');
+        newOutput.push('~ [RESUME PDF - Binary file]');
+        newOutput.push('~ Grace McPadden | Software Engineer');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('"resume.pdf" [readonly]');
+      } else if (filename === 'projects.txt') {
+        newOutput.push('Senior Design Project: Embodied AI Agent on Unitree Go2 Robot');
+        newOutput.push('Segmentation of Weapons from CCTV Footage with Computer Vision');
+        newOutput.push('Husky Quantitative Group - Portfolio Optimization with RL');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('"projects.txt" [readonly] 3L, 189B');
+      } else if (filename === 'skills.json') {
+        newOutput.push('{');
+        newOutput.push('  "languages": ["Python", "C++", "C", "SQL"],');
+        newOutput.push('  "ml_frameworks": ["PyTorch", "TensorFlow", "Computer Vision"],');
+        newOutput.push('  "data_tools": ["Pandas", "NumPy"]');
+        newOutput.push('}');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('"skills.json" [readonly]');
+      } else if (filename === 'secret.py') {
+        newOutput.push('#!/usr/bin/env python3');
+        newOutput.push('# Secret easter egg');
+        newOutput.push('print("🐱 found me!")');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('~');
+        newOutput.push('"secret.py" [readonly]');
+      } else {
+        newOutput.push(`vim: Error opening file "${filename}" - file not found`);
+      }
       newOutput.push('');
     } else if (trimmed === 'python secret.py') {
       newOutput.push('');
