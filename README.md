@@ -1,3 +1,17 @@
+First time making a project with claude code.
+
+It took literally 10 minutes to make and deploy this app... without touching one line of code.
+
+This was both exciting and terrifying.
+
+More to come...
+
+
+Check it out here https://grace-terminal-portfolio.gracemcpadden9.workers.dev/
+
+
+
+
 # Grace McPadden - Terminal Portfolio 🖥️
 
 An interactive PowerShell-style terminal portfolio website built with React. Navigate your way through my professional experience, projects, and skills using terminal commands. Features authentic Windows PowerShell aesthetics with Cascadia Code font and custom ASCII art designs.
