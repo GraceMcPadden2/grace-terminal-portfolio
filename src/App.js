@@ -44,7 +44,7 @@ function App() {
       newOutput.push('');
       newOutput.push('Software Engineer Intern - The Hartford (May 2025 – August 2025)');
       newOutput.push('  • Built a Retrieval-Augmented Generation (RAG) chatbot using AWS OpenSearch');
-      newOutput.push('    and vector embeddings to enable semantic search across internal documentation');
+      newOutput.push('    and vector embeddings for semantic search across internal documentation');
       newOutput.push('');
       newOutput.push('Teaching Assistant - University of Connecticut (August 2024 – Present)');
       newOutput.push('  • Led weekly programming labs for 150+ students in CSE3140 and CSE1010,');
