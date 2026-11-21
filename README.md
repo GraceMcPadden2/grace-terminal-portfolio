@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Grace McPadden - Terminal Portfolio 🖥️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A retro-style terminal portfolio website built with React. Features ASCII art, terminal aesthetics, and a unique hacker-inspired design.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🎨 Terminal UI with retro green screen aesthetic
+- 📝 ASCII art header with custom design
+- 🧭 Multiple sections: Home, About, Skills, Projects, Contact
+- ⌨️ Interactive navigation with hover effects
+- 📱 Fully responsive design
+- ✨ Glowing text effects and animations
+- 🖼️ Customizable content and colors
 
-### `npm start`
+## Customization Guide
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Update Your Information
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Edit `src/App.js` and replace placeholder content:
 
-### `npm test`
+- **Home Section**: Update the introduction text
+- **About Section**: Add your background, education, and interests
+- **Skills Section**: Replace with your actual skills and tools
+- **Projects Section**: Add your project details, links, and technologies
+- **Contact Section**: Update with your actual contact information
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Add Project Links
 
-### `npm run build`
+In the projects section, replace placeholder links:
+```javascript
+<span className="project-link">» GitHub Repo</span>
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Customize Colors
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Edit `src/App.css` to change the terminal colors. Main color variables:
+- Green: `#00ff00` (main text color)
+- Cyan: `#00ffff` (hover effects)
+- Yellow: `#ffff00` (links)
+- Blue: `#0088ff` (commands)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. Add More Sections
 
-### `npm run eject`
+To add a new section, follow this pattern in `src/App.js`:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```javascript
+case 'newsection':
+  return (
+    <div className="section">
+      <div className="command">cat newsection.txt</div>
+      <div className="output">
+        Your content here
+      </div>
+    </div>
+  );
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Then add it to the navigation bar:
+```javascript
+<span className="nav-item">
+  [newsection]
+</span>
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Installation
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Development
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Build for Production
 
-### Analyzing the Bundle Size
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Builds the app for production in the `build` folder.
 
-### Making a Progressive Web App
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This site can be deployed to various platforms:
 
-### Advanced Configuration
+- **Vercel**: Recommended for React apps
+- **Netlify**: Easy setup with git integration
+- **GitHub Pages**: Free hosting with custom domain support
+- **AWS**: S3 + CloudFront for scaling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Technologies Used
 
-### Deployment
+- React 18
+- CSS3 (with animations and gradients)
+- JavaScript ES6+
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
+This project is open source and available under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+**Made with ❤️ by Grace McPadden**
